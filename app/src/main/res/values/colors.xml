@@ -2,15 +2,15 @@
 <resources>
 
 
-    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimary">#2E2624</color>
     <color name="colorPrimaryDark">#FFC107</color>
-    <color name="colorAccent">#D8211B</color>
+    <color name="colorAccent">#3C201E</color>
     <color name="colorNull">#00000000</color>
     <color name="colorIcons">#7C7F81</color>
-    <color name="colorPrimaryText">#1e1e1e</color>
+    <color name="colorPrimaryText">#807878</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorWhiteDark">#DBDBDB</color>
-    <color name="colorPrimaryLight">#CA7474</color>
+    <color name="colorPrimaryLight">#C0BABA</color>
     <color name="colorBackground">#F4F7F7</color>
 
 </resources>
