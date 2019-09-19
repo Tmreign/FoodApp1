@@ -50,16 +50,17 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
                 >
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:drawableStart="@color/colorPrimaryLight"
+                    android:drawableLeft="@color/colorPrimaryLight"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
                     android:padding="10dp"
                     android:text="Search Meal "
-                    android:textColor="@color/colorPrimaryLight"
-                    android:gravity="center_vertical"
-                    android:drawableLeft="@color/colorPrimaryLight"
-                    android:drawableStart="@color/colorPrimaryLight"
-                    android:drawablePadding="10dp"/>
+                    android:textColor="@color/colorPrimaryLight" />
 
             </androidx.cardview.widget.CardView>
 
@@ -94,18 +95,16 @@
                 android:layout_marginTop="5dp"/>
 
 
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerCategory"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clipToPadding="false"
+                android:layout_width="360dp"
+                android:layout_height="397dp"
                 android:layout_below="@+id/titleCategory"
                 android:layout_alignTop="@+id/shimmerCategory"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="-35dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="50dp"
+                android:clipToPadding="false"
                 android:scrollbars="none">
 
             </androidx.recyclerview.widget.RecyclerView>
@@ -123,10 +122,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"/>
 
+            <com.spark.submitbutton.SubmitButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="false"
+                android:text="Submit"
+                android:textColor="@color/gray"
+                app:sub_btn_background="@color/white"
+                app:sub_btn_duration="3000"
+                app:sub_btn_line_color="#000"
+                app:sub_btn_ripple_color="#000"
+                app:sub_btn_tick_color="@color/white" />
+
+
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
-
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
