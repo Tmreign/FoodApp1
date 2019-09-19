@@ -1,5 +1,6 @@
 package com.example.foodapp1.view.main;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +21,7 @@ import com.example.foodapp1.adapter.ViewPagerHeaderAdapter;
 import com.example.foodapp1.model.Categories;
 import com.example.foodapp1.model.Meals;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.List;
 
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements MainView  {
     RecyclerView recyclerViewCategory;
 
     MainPresenter presenter;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,19 @@ public class MainActivity extends AppCompatActivity implements MainView  {
         presenter = new MainPresenter(this);
         presenter.getMeals();
         presenter.getCategories();
+
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    getSupportActionBar().setTitle("Welcome, " + user.getDisplayName() + "!");
+                } else {
+
+                }
+            }
+        };
     }
 
     @Override
@@ -112,6 +129,20 @@ public class MainActivity extends AppCompatActivity implements MainView  {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
     }
 
 
