@@ -122,20 +122,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"/>
 
-            <com.spark.submitbutton.SubmitButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="16dp"
-                android:layout_centerVertical="false"
-                android:text="Submit"
-                android:textColor="@color/gray"
-                app:sub_btn_background="@color/white"
-                app:sub_btn_duration="3000"
-                app:sub_btn_line_color="#000"
-                app:sub_btn_ripple_color="#000"
-                app:sub_btn_tick_color="@color/white" />
+<!--            <com.spark.submitbutton.SubmitButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_centerVertical="false"-->
+<!--                android:text="meals"-->
+<!--                android:textColor="@color/gray"-->
+<!--                app:sub_btn_background="@color/white"-->
+<!--                app:sub_btn_duration="3000"-->
+<!--                app:sub_btn_line_color="#000"-->
+<!--                app:sub_btn_ripple_color="#000"-->
+<!--                app:sub_btn_tick_color="@color/white" />-->
 
 
         </RelativeLayout>

@@ -8,14 +8,6 @@
     android:background="@color/colorBackground">
 
 
-    <ImageView
-        android:id="@+id/imagerot"
-        android:layout_width="250dp"
-        android:layout_height="235dp"
-        android:src="@drawable/dish"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="157dp" />
-
     <TextView
         android:id="@+id/textrot"
         android:layout_width="173dp"
@@ -24,13 +16,20 @@
         android:textColor="@color/colorPrimary"
         android:textSize="60dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="119dp"
-        tools:layout_editor_absoluteY="407dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_icons"
+        app:layout_constraintStart_toStartOf="@+id/iv_icons" />
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Get Started"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="561dp" />
+    <ImageView
+        android:id="@+id/iv_icons"
+        android:layout_width="250dp"
+        android:layout_height="235dp"
+        android:src="@drawable/dish"
+        app:layout_constraintBottom_toTopOf="@+id/textrot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
