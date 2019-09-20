@@ -8,6 +8,9 @@
     android:background="@color/colorBackground">
 
 
+
+
+
     <TextView
         android:id="@+id/textrot"
         android:layout_width="173dp"
